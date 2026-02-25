@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
-import { Home, Target, BarChart3, MessageSquare, Trophy, Table2, Plus, User, Menu } from 'lucide-react'
+import { Home, Target, BarChart3, MessageSquare,Globe, Trophy, Table2, Plus, User, Menu } from 'lucide-react'
 
 const sidebarLinks = [
   { href: '/predictions', icon: Target, label: 'Predictions' },
@@ -15,7 +15,7 @@ const sidebarLinks = [
 
 const bottomLinks = [
   { href: '/feed', icon: Home, label: 'Home' },
-  { href: '/feed/new', icon: Plus, label: 'Post', isAction: true },
+  { href: '/global', icon: Globe, label: 'Global', isAction: true },
   { href: '/profile', icon: User, label: 'Profile' },
 ]
 

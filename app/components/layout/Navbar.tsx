@@ -2,6 +2,7 @@
 
 import { createClient } from '@/lib/supabase'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 export default function Navbar() {
   const supabase = createClient()
@@ -113,12 +114,20 @@ export default function Navbar() {
                   <div className="h-px bg-slate-100 my-1" />
 
                   {/* Menu items */}
-                  <button className="w-full text-left px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50 rounded-xl transition-colors font-medium">
+                  <Link
+                    href="/profile"
+                    onClick={() => setDropdownOpen(false)}
+                    className="w-full text-left px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50 rounded-xl transition-colors font-medium flex items-center gap-2"
+                  >
                     My Profile
-                  </button>
-                  <button className="w-full text-left px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50 rounded-xl transition-colors font-medium">
+                  </Link>
+                  <Link
+                    href="/table"
+                    onClick={() => setDropdownOpen(false)}
+                    className="w-full text-left px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50 rounded-xl transition-colors font-medium flex items-center gap-2"
+                  >
                     My Club
-                  </button>
+                  </Link>
 
                   <div className="h-px bg-slate-100 my-1" />
 
